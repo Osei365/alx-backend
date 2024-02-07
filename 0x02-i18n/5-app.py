@@ -30,11 +30,11 @@ def get_user():
         return users[int(user_id)]
     return None
 
+
 @app.before_request
 def before_request():
     """runs before every app."""
     setattr(g, 'user', get_user())
-    
 
 
 @babel.localeselector
