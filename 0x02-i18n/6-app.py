@@ -41,8 +41,8 @@ def before_request():
 def get_locale():
     """gets local language."""
     options = [
-        request.args.get('locale', '').strip(),
-        g.user.get('locale', None) if g.user else None,
+        request.args.get('locale'),
+        g.user.get('locale') if g.user else None,
         request.accept_languages.best_match(app.config['LANGUAGES']),
         Config.BABEL_DEFAULT_LOCALE
     ]
