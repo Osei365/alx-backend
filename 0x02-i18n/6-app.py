@@ -54,7 +54,7 @@ def get_locale():
 @app.route('/')
 def index():
     """index view handler."""
-    return render_template('5-index.html')
+    return render_template('6-index.html')
 
 
 if __name__ == "__main__":
